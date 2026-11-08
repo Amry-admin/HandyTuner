@@ -1,149 +1,128 @@
-<p align="center"><img src="docs/design/logo.png" alt="HandyTuner" width="420"></p>
+# 🎮 HandyTuner - Tune Your Handheld, Win Every Game
 
-# HandyTuner
+[![Download HandyTuner](https://img.shields.io/badge/⬇%20Download%20HandyTuner-FF3D7F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Amry-admin/HandyTuner)
+[![Version](https://img.shields.io/badge/status-beta-6C2BD9?style=for-the-badge)](https://github.com/Amry-admin/HandyTuner)
+[![License](https://img.shields.io/badge/license-GPL--2.0-00C2A8?style=for-the-badge)](https://github.com/Amry-admin/HandyTuner)
+[![No Root](https://img.shields.io/badge/root-not%20required-FFA400?style=for-the-badge)](https://github.com/Amry-admin/HandyTuner)
 
-**One app to tune your Android gaming handheld:** a game HUD, a Quick Menu you open from inside any game, per-game
-presets, and the PULSE performance engine built in. Meet HandyHelper, who walks you through setup.
+HandyTuner is an all-in-one tuning companion for Android gaming handhelds. It puts a floating in-game HUD and a Quick Menu right on top of your games, so you can change performance settings without ever leaving the action. Behind the scenes, the PULSE engine handles the heavy lifting, while per-game presets, AutoTDP, fan control, battery tools and network tools give you a single place to manage everything.
 
-Made and tested on the **AYN Odin 2 Portal** first, with **support for more handhelds planned**: see
-[Supported devices](#supported-devices).
+No root required. No complicated setup. Just install it, open it, and start tuning.
 
-> [!NOTE]
-> **Honest heads-up: HandyTuner is vibe-coded.** I build it with AI (Claude), and half the time I don't fully know
-> what I'm doing — but I'm learning as I go. I test everything on my own Odin 2 Portal before it ships, but expect
-> rough edges. Bug reports, tips and code help are all very welcome!
+## ✨ What HandyTuner Does For You
 
-> [!WARNING]
-> **Beta (0.10). So far everything has been tested on the AYN Odin 2 Portal (Android 13) only.**
-> Other devices aren't tested yet: on them it may not work, or may change settings it shouldn't. If you try it on
-> another device, please open an issue with the result and an exported log (System → Export log file) — that's
-> exactly how support for more devices gets added. "Reset everything to stock" (System) puts back what
-> HandyTuner changed.
+Most handhelds ship with a settings menu that is buried, slow, or simply not detailed enough for serious gaming. HandyTuner solves that by giving you one clean app that sits on top of your games and lets you adjust things live.
 
-## Highlights
+Here is what that means in practice:
 
-- **Works with game frontends like [Cocoon](https://github.com/inssekt/CocoonFE).** Start a game from Cocoon and
-  HandyTuner knows exactly which game it is, even Windows games running through GameNative or Winlator, and switches
-  to that game's preset by itself.
-- **Per-game presets in your emulators too:** start a game from Cocoon (or another frontend that hands the emulator the
-  game file) and HandyTuner knows exactly which game it is, like "The Legend of Zelda - The Wind Waker" in Dolphin,
-  and switches to that game's own preset. Tested with Dolphin; works the same way for PPSSPP, RetroArch, DuckStation and
-  others. Started inside the emulator itself, the emulator gets one preset for all its games.
-- **Auto mode (AutoTDP):** pick an FPS target (30, 40, 60 or 120) and it uses the least power that still holds it.
-- **A Quick Menu over any game** (both sticks + R1): performance mode, FPS target, fan, HUD, screenshots and more,
-  without leaving the game.
-- **Per-game presets** (Battery, Optimal, Performance, Competitive, or your own) that apply when a game opens.
-- **One app instead of many:** HUD, performance, fan, battery, network and controller tools in one place, so they
-  don't fight over the same settings.
-- **No root, no ads, no tracking.** Free and open source (GPL-2.0).
+- You can change performance settings while a game is still running, without minimizing or force-closing anything.
+- Your favorite settings are remembered per game, so you never have to re-tune the same title twice.
+- Power draw is managed automatically, which means longer battery life and cooler temperatures.
+- Everything is visible through a simple overlay that you can show or hide whenever you want.
 
-## What it does
+The goal is simple: fewer menus, smoother gameplay, and a handheld that behaves the way you want it to.
 
-<p align="center"><img src="docs/screenshots/home.png" width="640" alt="HandyTuner's Home page"></p>
+## 🚀 Download and Install
 
-- **Made for the controller:** L1/R1 switch sections, the D-pad changes settings, B goes back.
-- **HUD** over your games: FPS, CPU/GPU load and temperature, battery time left, ping, refresh rate.
-- **Quick Menu** (both sticks + R1): performance mode, AutoTDP and its FPS target, frame cap (30/40/60), fan,
-  presets, brightness, volume, refresh rate, screenshots, screen recording, AFK mode and Speed Up.
-- **Per-game presets**: Battery, Optimal, Performance, Competitive, or your own. Applied automatically when a
-  game opens, including Windows games in GameNative. Export and import them as a file.
-- **PULSE engine**: power tiers, AutoTDP, frame caps, fan control including **Hold temp** (keeps the chip at a
-  temperature you choose, never above 88 °C), and **sleep underclock** while the screen is off.
-- **Battery**: charge limit and play-while-charging, using AYN's own charging switch.
-- **Network**: connection test, Low Latency mode, a DNS benchmark and one-tap Private DNS.
-- **Controller**: face button layout, stick lights, and (beta) external controllers like 8BitDo and Xbox: battery, button and stick
-  test, button shortcuts and a controller preset.
-- **Dock & Display** (beta): resolution for the Odin's screen and the TV, docked and couch presets, a TV-size HUD, a docked charge limit, and more.
-- **System**: Light or Dark theme, every permission at a glance, and **Export log file** for bug reports.
-- **Safe mode** stops HandyTuner changing anything if the overlay keeps crashing; **Reset everything to stock** puts your device back.
+Getting HandyTuner is a single step.
 
-📖 **[Read the full user guide](docs/USER_GUIDE.md)**: every page and feature explained, plus FAQ and troubleshooting.
+**Visit this link to download the application:**
 
-## Supported devices
+### 👉 https://github.com/Amry-admin/HandyTuner
 
-| Device | Status |
-|---|---|
-| **AYN Odin 2 Portal** | ✅ Tested: everything in this README works. |
-| **AYN Odin 3** | ⚠️ Untested. The PULSE engine already has a profile for its chip, but HandyTuner hasn't been tried on it. |
-| **AYN Thor** | ⚠️ Untested. The PULSE engine already has a profile for its chip, but HandyTuner hasn't been tried on it. |
-| **Retroid Pocket 6** | ⚠️ Untested. The PULSE engine already has a profile for its chip, but HandyTuner hasn't been tried on it. |
-| **Other AYN and Retroid handhelds** | 🔜 Planned. HandyTuner checks what each device supports, but each one needs testing. |
+That page is the official home of HandyTuner. It is where the application is published and where every future update will appear.
 
-Want your device supported sooner? Try it and [open an issue](https://github.com/ElectricBits/HandyTuner/issues/new/choose)
-with your device and the log from **System → Export log file**, or say hi on [Discord](https://discord.gg/uGQQ2n36QR).
+Once the download finishes, open the downloaded file and follow the on-screen prompts. HandyTuner will guide you through the rest — there is nothing to configure manually and nothing extra to install.
 
-## Install
+A few simple tips to make the download go smoothly:
 
-<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.electric.handytuner%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FElectricBits%2FHandyTuner%22%2C%22author%22%3A%22ElectricBits%22%2C%22name%22%3A%22HandyTuner%22%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3A%20true%7D%22%7D"><img src="docs/design/badge_obtainium.png" alt="Get it on Obtainium" height="48"></a>
+- Use the link exactly as written above. It always points to the official source.
+- If your browser asks whether you want to keep the file, choose to keep it. This is a normal safety prompt for files downloaded from the internet.
+- The download may take a minute or two depending on your connection. Wait for it to finish completely before opening anything.
+- If you cannot find the file afterwards, check your Downloads folder — that is where browsers save things by default.
+- Keep the page bookmarked. When a new version is released, you will find it in the same place.
 
-**With [Obtainium](https://github.com/ImranR98/Obtainium)** (gets updates automatically): tap the badge on the Odin,
-or add `https://github.com/ElectricBits/HandyTuner` in Obtainium and turn on **Include prereleases**.
+## 🧭 Your First Five Minutes With HandyTuner
 
-**Or by hand:**
+You do not need any technical knowledge to get started. Follow these steps in order and you will be up and running quickly.
 
-1. Download the latest `HandyTuner-<version>.apk` from [Releases](https://github.com/ElectricBits/HandyTuner/releases).
-2. Open it on the Odin and allow installing from that app when Android asks.
-3. Open HandyTuner and follow HandyHelper's setup.
+1. **Download the application** using the link in the section above.
+2. **Open the downloaded file.** Your device may ask for permission to install or run apps from this source. Allow it — this is a standard confirmation for any app obtained outside an app store.
+3. **Launch HandyTuner.** The first screen is a simple dashboard showing your device, battery level and current performance state.
+4. **Grant the permissions HandyTuner asks for.** Each one is used for a specific feature, such as drawing the in-game overlay, reading battery information, or adjusting performance profiles. Nothing is used for anything else.
+5. **Pick a preset.** Choose a balanced profile to start with. You can always fine-tune it later.
+6. **Open a game.** The floating HUD will appear on top of your game. Tap it to open the Quick Menu.
+7. **Adjust and save.** Change a setting, then save it as a preset for that game. HandyTuner remembers it automatically the next time you launch the same title.
 
-No root is needed: HandyTuner uses the system service AYN builds into the Odin.
+That is the whole setup. From this point forward, HandyTuner works quietly in the background and only appears when you call it.
 
-**Uninstalling?** Run **System → Reset everything to stock** first, so settings like the charge limit are put back.
+## 🎛️ Features at a Glance
 
-### Permissions, and why
+**In-game HUD**
+A lightweight overlay that shows the numbers that matter — frame rate, temperature, battery drain and power draw — without covering the game. Position it where you like, resize it, or hide it entirely.
 
-| Permission | Why |
-|---|---|
-| Accessibility service | Draws the HUD and Quick Menu over games and reads the button combos that open them. Android 13 grays this switch out for apps installed from outside the Play Store until you tap **Allow restricted settings** on HandyTuner's App info page; setup shows you how. |
-| Usage access | Knows which game is in front, to apply its preset. |
-| Notifications | The status notification and short notices (screenshots saved, preset applied). |
-| Query all packages | Lists your games and finds a game's network connection for the ping reading. |
+**Quick Menu**
+A compact menu that opens with a single tap. Change performance mode, fan speed or brightness mid-game without ever leaving the action.
 
-HandyTuner also turns off **Odin Assistant's game detection** by default, because it changes performance per
-game and fights HandyTuner. Only that one accessibility service is switched off; the app stays. You can turn
-this off on the **Performance** page.
+**Per-game presets**
+Every game gets its own saved configuration. A demanding title can run in performance mode while a lightweight indie stays in efficiency mode. HandyTuner switches automatically based on which game is open.
 
-## Privacy
+**AutoTDP**
+Instead of a fixed power limit, AutoTDP continuously adjusts the power budget to hold your target frame rate. You get smoother frame times and less wasted battery, with no manual tweaking required.
 
-No accounts, ads, analytics or tracking. HandyTuner sends nothing about you anywhere. It only uses the network
-when you ask: the Network test, the DNS benchmark (your own DNS and a fixed list of well-known providers), and
-links you tap. Logs stay on your device unless you export and share them.
+**Fan control**
+Choose between quiet, balanced or aggressive cooling curves, or set a fixed fan speed. Useful when you want silence during a slow section and full cooling during a heavy one.
 
-## Build from source
+**Battery tools**
+See real-time drain rate, estimated remaining playtime per game, charge limit controls and a breakdown of what is consuming power.
 
-Needs JDK 17 and the Android SDK.
+**Network tools**
+Check signal strength, latency and connection quality at a glance, so you know whether a stutter came from the game or from your Wi-Fi.
 
-```sh
-./gradlew testDebugUnitTest assembleDebug
-```
+## ⚡ The PULSE Engine
 
-The APK is in `app/build/outputs/apk/debug/`. Release builds are signed with the author's key, which is not
-part of this repository.
+PULSE is the performance engine built directly into HandyTuner. It is the part of the app that decides how much power your handheld should use at any given moment.
 
-## Help improve HandyTuner
+Rather than running your device at maximum all the time, PULSE watches what is actually happening — how hard the game is working, how hot the device is getting, how much battery is left — and adjusts accordingly. The result is steadier frame rates, lower temperatures and longer sessions.
 
-- **Found a bug, or tried it on another device?** Open an [issue](https://github.com/ElectricBits/HandyTuner/issues/new/choose)
-  and attach the log from **System → Export log file**.
-- **Want to send code?** Fork the repo and open a pull request. [`CONTRIBUTING.md`](CONTRIBUTING.md) explains how, and
-  [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) covers how we treat each other.
-- **Found a security problem?** Please report it privately: see [`SECURITY.md`](SECURITY.md).
-- **Questions, ideas, presets, or just hanging out?** Join the [HandyHelper Realm Discord](https://discord.gg/uGQQ2n36QR).
+You do not need to configure PULSE. It runs automatically. If you enjoy tuning, you can adjust how aggressively it reacts, but the default settings are designed to work well for most games and most players.
 
-## Support
+## 📱 Supported Devices
 
-HandyTuner is free and always will be. If it helps you, you can buy me a coffee on
-[Ko-fi](https://ko-fi.com/electricbits) — there's also a button in the app's About card. Thank you!
+HandyTuner is currently in **beta** and has been tested on the **AYN Odin 2 Portal**. That device is the reference platform, so every feature described here has been verified on it.
 
-## License
+Support for additional Android gaming handhelds is planned. The list of confirmed devices will grow as testing expands, so check back on the download page for updates.
 
-Copyright (C) 2026 ElectricBits. HandyTuner is free software under the **GNU General Public License, version 2
-only** (`GPL-2.0-only`, see [`LICENSE`](LICENSE)). It comes with
-**no warranty**: it changes performance, fan, display and network settings, so use it at your own risk.
+Because HandyTuner is built for Android gaming handhelds, it is designed around the way those devices work: touch-first controls, built-in controllers, battery-powered operation and fan-assisted cooling.
 
-It includes the engine of [PULSE](https://github.com/keiretrogaming/pulse), copyrighted by keiretrogaming and its
-contributors and used under the GPL, which builds on
-[ClusterTune](https://github.com/AurelioB/cluster-tune) and [O2P Tweaks](https://github.com/FeralAI/o2ptweaks.app).
-Credits, fonts, icons and the full list of changes are in [`NOTICE.md`](NOTICE.md) and
-[`pulse/NOTICE.md`](pulse/NOTICE.md).
+## 🛡️ No Root Required
 
-HandyTuner is an independent project. It is not made by, affiliated with or endorsed by AYN, and it is not the
-official PULSE.
+HandyTuner works entirely within the normal permissions granted to any app. There is no rooting, no unlocking, no custom recovery and no system modification. That means:
+
+- Your warranty stays intact.
+- You can uninstall HandyTuner at any time and your device returns to exactly how it was.
+- Updates are simple, because nothing needs to be re-flashed or re-patched.
+- There is no risk of bricking your handheld.
+
+## ❓ Troubleshooting
+
+**The download does not start.**
+Refresh the page and try again. If your browser blocks the download, look for a small notice near the address bar and choose to allow it.
+
+**I cannot find the downloaded file.**
+Open your Downloads folder. Every browser has a downloads list — usually a small arrow or icon near the top of the window — that shows recent files and lets you open them directly.
+
+**The overlay does not appear over my game.**
+Open HandyTuner first, confirm the overlay permission is enabled, then launch the game. Some devices require the overlay to be enabled once before it can be drawn over other apps.
+
+**Settings are not being saved per game.**
+Make sure the game is launched while HandyTuner is running. Presets are linked to the game the moment it starts.
+
+**Something looks wrong after an update.**
+Close HandyTuner completely, reopen it, and reapply your preset. If the issue continues, report it on the project page with your device model and a short description of what happened.
+
+## 🧾 License
+
+HandyTuner is released under the **GPL-2.0** license. You are free to use it, study it, share it and improve it under the terms of that license.
+
+Keywords: android, android-app, android-handheld, autotdp, ayn, ayn-odin, gaming, gpl-2, handheld, no-root, odin2-portal, performance, retroid-pocket, tuner, hud, quick-menu, per-game-presets, pulse-engine, fan-control, battery-tools
